@@ -3,8 +3,25 @@ Django superuser:
 username: admindjango
 password: employee@123!
 
-APIs to check:
-api/menu/
-api/menu/<int:pk>
-api/api-token-auth/
-http://127.0.0.1:8000/restaurant/booking/tables/
+Endpoints available:
+
+•Template render:
+
+    /restaurant/
+
+•API calls:
+
+    /restaurant/api/booking/
+    /restaurant/api/menu/
+
+•Generate token(via DRF):
+    POST /restaurant/api-token-auth/
+
+•Djoser endpoints:
+
+    POST /auth/users/
+    GET /auth/users/
+    GET /auth/users/{id}/
+    PUT /auth/users/{id}/
+    DELETE /auth/users/{id}/
+    POST auth/users/login/
