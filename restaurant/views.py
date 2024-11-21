@@ -12,16 +12,10 @@ from rest_framework.permissions import IsAuthenticated
 def index(request):
     return render(request, 'index.html', {})
 
-# class bookingview(APIView):
-#     def get(self, request):
-#         items = booking.objects.all()
-#         serializer = bookingSerializer(items, many=True)
-#         return Response(serializer.data) 
 
 class MenuItemView(generics.ListCreateAPIView):
     queryset = Menu.objects.all()
     serializer_class = menuSerializer
-    
     
 class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Menu.objects.all()
